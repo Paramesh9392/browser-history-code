@@ -129,7 +129,7 @@ class App extends Component {
 
             <input
               className="input"
-              type="text"
+              type="search"
               placeholder="Search history"
               onChange={this.ChangeFunction}
               value={searchInput}
@@ -143,7 +143,6 @@ class App extends Component {
               {newHistoryList.map(eachObj => (
                 <li
                   key={eachObj.id}
-                  unigueId={eachObj.id}
                   className="items-container"
                 >
                   <p className="time"> {eachObj.timeAccessed} </p>
