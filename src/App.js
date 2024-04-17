@@ -91,7 +91,7 @@ class App extends Component {
       eachValue => eachValue.id !== value,
     )
 
-    if (newHistoryList.lenght === 0) {
+    if (newHistoryList.length === 0) {
       this.setState({latestHistoryList: newHistoryList, isTrue: true})
     } else {
       this.setState({latestHistoryList: newHistoryList})
@@ -104,7 +104,7 @@ class App extends Component {
 
   render() {
     const {searchInput, latestHistoryList} = this.state
-    const {isTrue} = this.state
+    let {isTrue} = this.state
     const newHistoryList = latestHistoryList.filter(eachValue =>
       eachValue.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
